@@ -2,18 +2,6 @@ version: 2
 jobs:
   build:
     docker:
-      # Primary Executor
+     
       - image: openjdk:11.0
-        auth:
-          username: compose-postgres
-          password: compose-postgres # context / project UI env-var reference
-
-      # Dependency Service(s)
-      - image: postgres:14.2-alpine
-        auth:
-          username: compose-postgres
-          password: compose-postgres  # context / project UI env-var reference
-        environment:
-          POSTGRES_USER: compose-postgres
-          POSTGRES_PASSWORD: compose-postgres
-          POSTGRES_DB: compose-postgres
+       
